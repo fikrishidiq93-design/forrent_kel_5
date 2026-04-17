@@ -2,15 +2,10 @@
 session_start();
 
 if(isset($_POST['login'])){
-  $user = $_POST['username'];
-  $pass = $_POST['password'];
-
-  if($user == "admin" && $pass == "123"){
-    $_SESSION['login'] = true;
+  if($_POST['username']=="admin" && $_POST['password']=="fikriganteng"){
+    $_SESSION['login']=true;
     header("Location: admin.php");
     exit;
-  } else {
-    $error = "Username atau password salah!";
   }
 }
 ?>
@@ -19,24 +14,20 @@ if(isset($_POST['login'])){
 <html>
 <head>
 <title>Login</title>
-
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="cssadmin-login/login.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
-<body>
+
+<body class="login-body">
 
 <div class="login-container">
 
-  <!-- LEFT -->
   <div class="login-left">
-    <h2><i class="fa-solid fa-circle-check"></i> Admin Dashboard</h2>
+    <h2><i class="fa fa-check-circle"></i> Admin Dashboard</h2>
 
     <h1>Welcome Back!</h1>
     <p>Please sign in to your account</p>
-
-    <?php if(isset($error)) echo "<p style='color:red'>$error</p>"; ?>
 
     <form method="post">
 
@@ -56,19 +47,20 @@ if(isset($_POST['login'])){
         <a href="#">Forgot Password?</a>
       </div>
 
-      <button type="submit" name="login" class="btn-login">Login</button>
-
+      <button name="login" class="btn-login">Login</button>
+       <!-- OR -->
       <div class="or">Or</div>
 
+      <!-- SOCIAL -->
       <div class="social">
-        <div class="social-btn"><i class="fab fa-google"></i></div>
-        <div class="social-btn"><i class="fab fa-facebook-f"></i></div>
+        <div class="social-btn facebook"><i class="fab fa-facebook-f"></i></div>
+        <div class="social-btn google"><i class="fab fa-google"></i></div>
+        <div class="social-btn email"><i class="fa fa-envelope"></i></div>
       </div>
 
     </form>
   </div>
 
-  <!-- RIGHT -->
   <div class="login-right">
     <img src="img/login.png">
   </div>

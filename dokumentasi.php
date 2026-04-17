@@ -24,7 +24,7 @@
 
     <!-- CARD -->
     <div class="galeri-card">
-      <img src="img/1.jpg">
+      <img src="img/ui.jpg">
       <div class="galeri-text">
         <span class="tag biru">Workshop</span>
         <h4>Workshop UI & GitHub</h4>
@@ -33,7 +33,7 @@
     </div>
 
     <div class="galeri-card">
-      <img src="img/2.jpg">
+      <img src="img/download (3).jpg">
       <div class="galeri-text">
         <span class="tag ungu">Meeting</span>
         <h4>Gathering Kelas 2024</h4>
@@ -42,7 +42,7 @@
     </div>
 
     <div class="galeri-card">
-      <img src="img/3.jpg">
+      <img src="img/seminar.jpg">
       <div class="galeri-text">
         <span class="tag biru">Seminar</span>
         <h4>Seminar Teknologi AI</h4>
@@ -51,7 +51,7 @@
     </div>
 
     <div class="galeri-card">
-      <img src="img/4.jpg">
+      <img src="img/pemograman.jpg">
       <div class="galeri-text">
         <span class="tag hijau">Kuliah</span>
         <h4>Praktikum Pemrograman</h4>
@@ -60,7 +60,7 @@
     </div>
 
     <div class="galeri-card">
-      <img src="img/5.jpg">
+      <img src="img/kelompok.jpg">
       <div class="galeri-text">
         <span class="tag orange">Diskusi</span>
         <h4>Diskusi Kelompok</h4>
@@ -69,7 +69,7 @@
     </div>
 
     <div class="galeri-card">
-      <img src="img/6.jpg">
+      <img src="img/jj.jpg">
       <div class="galeri-text">
         <span class="tag pink">Presentasi</span>
         <h4>Presentasi Project</h4>
@@ -78,7 +78,7 @@
     </div>
 
     <div class="galeri-card">
-      <img src="img/7.jpg">
+      <img src="img/Post Production Lab_Classroom.jpg">
       <div class="galeri-text">
         <span class="tag biru">Lab</span>
         <h4>Praktikum Lab</h4>
@@ -87,7 +87,7 @@
     </div>
 
     <div class="galeri-card">
-      <img src="img/8.jpg">
+      <img src="img/rapat.jpg">
       <div class="galeri-text">
         <span class="tag merah">Meeting</span>
         <h4>Rapat Koordinasi</h4>

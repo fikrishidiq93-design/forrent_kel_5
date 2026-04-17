@@ -30,7 +30,7 @@
 </div>
 </div>
 
-<div class="section">
+<div class="section" id="tentang">
 <h2 class="title">Tentang kita</h2>
 <p class="sub">Kelas yang solid dan berprestasi</p>
 
@@ -58,7 +58,7 @@
 </div>
 </div>
 
-<div class="section">
+<div class="section" id="jelajahi">
   <div class="container">
 
     <h2 class="title">Jelajahi Kelas Kami</h2>
@@ -66,7 +66,7 @@
 
     <div class="grid">
 
-      <a href="profil.php" class="card">
+      <a href="tentang.php" class="card">
         <div class="icon-box"><i class="fa-solid fa-user"></i></div>
         <div>
           <h3>Profil lengkap</h3>

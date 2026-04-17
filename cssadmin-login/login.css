@@ -1,0 +1,133 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#1e2a78,#4e6bff);
+}
+
+/* WRAPPER */
+.login-container{
+  width:900px;
+  margin:50px auto;
+  display:flex;
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 30px 60px rgba(0,0,0,0.2);
+}
+
+/* LEFT */
+.login-left{
+  width:50%;
+  padding:40px;
+}
+
+.login-left h1{
+  margin-top:10px;
+}
+
+.login-left p{
+  color:#777;
+  margin-bottom:20px;
+}
+
+/* INPUT */
+.input-box{
+  display:flex;
+  align-items:center;
+  border:1px solid #ddd;
+  padding:10px;
+  border-radius:10px;
+  margin-bottom:15px;
+}
+
+.input-box i{
+  margin-right:10px;
+  color:#999;
+}
+
+.input-box input{
+  border:none;
+  outline:none;
+  width:100%;
+}
+
+/* BUTTON */
+.btn-login{
+  width:100%;
+  padding:12px;
+  background:linear-gradient(135deg,#2d3e91,#4e6bff);
+  color:white;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+/* OR */
+.or{
+  text-align:center;
+  margin:20px 0;
+  position:relative;
+  color:#aaa;
+}
+
+.or::before,
+.or::after{
+  content:'';
+  position:absolute;
+  width:40%;
+  height:1px;
+  background:#ddd;
+  top:50%;
+}
+
+.or::before{left:0}
+.or::after{right:0}
+
+/* SOCIAL */
+.social{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.social-btn{
+  width:45px;
+  height:45px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  cursor:pointer;
+  transition:0.3s;
+  color:white;
+}
+
+/* WARNA */
+.google{ background:#db4437; }
+.facebook{ background:#1877f2; }
+.email{ background:#555; }
+
+/* HOVER */
+.social-btn:hover{
+  transform:scale(1.1);
+  opacity:0.9;
+}
+
+/* RIGHT */
+.login-right{
+  width:50%;
+  background:#f5f6fb;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.login-right img{
+  width:90%;
+}
