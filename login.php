@@ -4,7 +4,7 @@ session_start();
 if(isset($_POST['login'])){
   if($_POST['username']=="admin" && $_POST['password']=="fikriganteng"){
     $_SESSION['login']=true;
-    header("Location: admin.php");
+    header("Location: admin/admin.php");
     exit;
   }
 }
