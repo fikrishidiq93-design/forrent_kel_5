@@ -44,7 +44,7 @@ if(isset($_POST['login'])){
 
       <div class="login-options">
         <label><input type="checkbox"> Remember me</label>
-        <a href="#">Forgot Password?</a>
+        <a href="register.php">Register?</a>
       </div>
 
       <button name="login" class="btn-login">Login</button>
@@ -54,7 +54,9 @@ if(isset($_POST['login'])){
       <!-- SOCIAL -->
       <div class="social">
         <div class="social-btn facebook"><i class="fab fa-facebook-f"></i></div>
-        <div class="social-btn google"><i class="fab fa-google"></i></div>
+        <a href="google/login.php" class="social-btn google">
+  <i class="fab fa-google"></i>
+</a>
         <div class="social-btn email"><i class="fa fa-envelope"></i></div>
       </div>
 
