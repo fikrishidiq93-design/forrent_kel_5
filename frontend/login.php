@@ -3,73 +3,70 @@ session_start();
 
 include 'koneksi.php';
 
-$error="";
+$error = "";
 
 if(isset($_POST['login'])){
 
-$username=mysqli_real_escape_string(
-$conn,
-$_POST['username']
-);
+    $username = mysqli_real_escape_string(
+        $conn,
+        $_POST['username']
+    );
 
-$password=$_POST['password'];
+    $password = $_POST['password'];
 
-$query=mysqli_query(
+    $query = mysqli_query(
 
-$conn,
+        $conn,
 
-"SELECT * FROM users
-WHERE email='$username'
-OR nim='$username'"
+        "SELECT * FROM users 
+        WHERE email='$username'
+        OR nim='$username'"
 
-);
+    );
 
-if(!$query){
+    if(!$query){
 
-die(
-mysqli_error($conn)
-);
+        die(
+            mysqli_error($conn)
+        );
 
-}
+    }
 
-$data=mysqli_fetch_assoc(
-$query
-);
+    $data = mysqli_fetch_assoc(
+        $query
+    );
 
-if($data){
+    if($data){
 
-if(
-$password==$data['password']
-){
+        // cek password
+        if($password == $data['password']){
 
-$_SESSION['login']=true;
+            $_SESSION['login'] = true;
 
-$_SESSION['nama']=$data['nama'];
+            $_SESSION['nama'] = $data['nama'];
 
-$_SESSION['email']=$data['email'];
+            $_SESSION['email'] = $data['email'];
 
-$_SESSION['nim']=$data['nim'];
+            $_SESSION['nim'] = $data['nim'];
 
-header(
-"Location: ../admin/admin.php"
-);
+            // arahkan ke folder admin
+            header("Location: admin/admin.php");
 
-exit;
+            exit;
 
-}else{
+        }else{
 
-$error="Password salah";
+            $error = "Password salah";
 
-}
+        }
 
-}else{
+    }else{
 
-$error="Akun tidak ditemukan";
+        $error = "Akun tidak ditemukan";
 
-}
+    }
 
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -80,6 +77,7 @@ $error="Akun tidak ditemukan";
 <title>Login</title>
 
 <link rel="stylesheet" href="cssadmin-login/login.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
 rel="stylesheet">
 
@@ -107,7 +105,6 @@ Welcome Back!
 Please sign in to your account
 </p>
 
-
 <form method="POST">
 
 <div class="input-box">
@@ -121,7 +118,6 @@ placeholder="Email atau NIM"
 required>
 
 </div>
-
 
 <div class="input-box">
 
@@ -141,7 +137,6 @@ onclick="togglePassword()">
 
 </div>
 
-
 <div class="login-options">
 
 <label>
@@ -160,7 +155,6 @@ Register?
 
 </div>
 
-
 <?php if($error!=""): ?>
 
 <div style="
@@ -178,7 +172,6 @@ text-align:center;
 
 <?php endif; ?>
 
-
 <button
 name="login"
 class="btn-login">
@@ -187,13 +180,11 @@ Login
 
 </button>
 
-
 <div class="or">
 
 Or
 
 </div>
-
 
 <div class="social">
 
@@ -207,7 +198,6 @@ Or
 
 </a>
 
-
 <a href="#">
 
 <div class="social-btn google">
@@ -217,7 +207,6 @@ Or
 </div>
 
 </a>
-
 
 <a href="#">
 
@@ -235,7 +224,6 @@ Or
 
 </div>
 
-
 <div class="login-right">
 
 <img src="img/login.png">
@@ -244,17 +232,16 @@ Or
 
 </div>
 
-
 <script>
 
 function togglePassword(){
 
-var x=
+var x =
 document.getElementById(
 "password"
 );
 
-x.type=
+x.type =
 x.type==="password"
 ?
 "text"
