@@ -1,3 +1,18 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "kelas_db");
-?> 
+
+$conn=mysqli_connect(
+
+"localhost",
+"root",
+"",
+"sistem_kelas"
+
+);
+
+if(!$conn){
+
+die("Koneksi gagal");
+
+}
+
+?>
